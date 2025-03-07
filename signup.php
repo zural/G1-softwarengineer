@@ -1,3 +1,4 @@
+
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
@@ -33,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             height: 100vh;
         }
         .navbar {
-            width: 100%;
+            width: 96%;
             padding: 10px 30px;
             display: flex;
             justify-content: space-between;
@@ -57,58 +58,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         .container {
             background: white;
-            padding: 30px;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
-            width: 350px;
-            margin-top: 80px;
-        }
-        h2 {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
+            width: 280px;
+            margin-top: 60px;
         }
         input {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-bottom: 2px solid #3d1050;
-            border-radius: 0;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
             font-size: 14px;
-            outline: none;
-        }
-        .password-container {
-            display: flex;
-            justify-content: space-between;
-        }
-        .password-container input {
-            width: 48%;
         }
         .btn {
             background: #190032;
             color: white;
-            padding: 10px;
+            padding: 8px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-            margin-top: 10px;
-        }
-        .btn:hover {
-            background: #29004d;
-        }
-        .login-link {
-            margin-top: 10px;
             font-size: 14px;
         }
-        .login-link a {
-            color: #3d1050;
-            text-decoration: none;
-            font-weight: bold;
-        }
+        .error { color: red; }
+        .success { color: green; }
     </style>
 </head>
 <body>
@@ -121,20 +96,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
     <div class="container">
-        <h2>Sign up</h2>
+        <h2>Sign Up</h2>
         <?php if (!empty($error)) echo "<p class='error'>$error</p>"; ?>
         <?php if (!empty($success)) echo "<p class='success'>$success</p>"; ?>
         <form method="post">
             <input type="text" name="username" placeholder="Username" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="text" name="phone" placeholder="Phone Number" required>
-            <div class="password-container">
-                <input type="password" name="password" placeholder="Password" required>
-                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-            </div>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
             <button type="submit" class="btn">Sign Up</button>
         </form>
-        <div class="login-link">or <a href="#">Log in</a></div>
     </div>
 </body>
 </html>
