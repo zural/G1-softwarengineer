@@ -27,9 +27,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             font-family: Arial, sans-serif;
             background: linear-gradient(to right, #3d1050, #c65591);
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
+        }
+        .navbar {
+            width: 100%;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #3d1050, #c65591);
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
         }
         .container {
             background: white;
@@ -38,6 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
             width: 350px;
+            margin-top: 80px;
         }
         input {
             width: 100%;
@@ -59,6 +83,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <div>Optima Bank</div>
+        <div>
+            <a href="#">ABOUT US</a>
+            <a href="#">CONTACT</a>
+            <a href="#" style="text-decoration: underline;">SIGN UP</a>
+        </div>
+    </div>
     <div class="container">
         <h2>Sign Up</h2>
         <?php if (!empty($error)) echo "<p class='error'>$error</p>"; ?>
