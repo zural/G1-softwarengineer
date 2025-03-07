@@ -11,6 +11,7 @@
         <li><a href="Login.php">Login Page</a></li>
         <li><a href="Mainpage.php">Main Page</a></li>
         <li><a href="signup.php">Signup Page</a></li>
+        <li><a href="signup.php">signin Page</a></li>
     </ul>
 </body>
 </html>
