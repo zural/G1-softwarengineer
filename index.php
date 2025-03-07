@@ -134,7 +134,7 @@
         <p>Your trusted partner in financial success</p>
         <a href="signup.php" class="btn">Join Now</a>
     </div>
-
+<br>
     <div class="optima-section">
         <h2>About Optima Bank</h2>
         <p>Optima Bank is a leading financial institution committed to providing innovative banking solutions tailored to meet the needs of individuals and businesses. With a customer-first approach, we offer seamless banking experiences through digital innovation and personalized services.</p>
