@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshCart - Online Grocery Store | Optima Bank</title>
+    <title> Optima Bank</title>
     <style>
         * {
             margin: 0;
