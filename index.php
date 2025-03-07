@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Optima Bank</title>
+    <title>FreshCart - Online Grocery Store | Optima Bank</title>
     <style>
         * {
             margin: 0;
@@ -12,9 +12,10 @@
         }
         
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Poppins", Arial, sans-serif;
             background: linear-gradient(to right, #4b006e, #d472a3);
             color: white;
+            line-height: 1.6;
         }
 
         /* Navbar */
@@ -51,18 +52,19 @@
         /* Banner */
         .banner {
             text-align: center;
-            padding: 50px 20px;
+            padding: 30px 20px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
-            margin: 20px;
+            margin: 20px auto;
+            width: 60%;
         }
 
         .banner h1 {
-            font-size: 36px;
+            font-size: 32px;
         }
 
         .banner p {
-            font-size: 18px;
+            font-size: 16px;
             margin-top: 10px;
         }
 
@@ -78,16 +80,17 @@
 
         /* Optima Section */
         .optima-section {
-            padding: 40px 20px;
+            padding: 30px 20px;
             text-align: center;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
-            margin: 20px;
+            margin: 20px auto;
+            width: 60%;
         }
 
         .optima-section h2 {
             color: white;
-            font-size: 28px;
+            font-size: 24px;
         }
 
         .optima-section p {
@@ -110,20 +113,8 @@
                 margin-top: 10px;
             }
 
-            .banner h1 {
-                font-size: 28px;
-            }
-
-            .banner p {
-                font-size: 16px;
-            }
-
-            .optima-section h2 {
-                font-size: 24px;
-            }
-
-            .optima-section p {
-                font-size: 14px;
+            .banner, .optima-section {
+                width: 90%;
             }
         }
     </style>
@@ -143,7 +134,7 @@
         <p>Your trusted partner in financial success</p>
         <a href="signup.php" class="btn">Join Now</a>
     </div>
-<br>
+
     <div class="optima-section">
         <h2>About Optima Bank</h2>
         <p>Optima Bank is a leading financial institution committed to providing innovative banking solutions tailored to meet the needs of individuals and businesses. With a customer-first approach, we offer seamless banking experiences through digital innovation and personalized services.</p>
