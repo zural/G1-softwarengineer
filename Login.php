@@ -20,11 +20,16 @@ session_start();
             padding: 20px 50px;
             background: linear-gradient(to right, #4b006e, #b04585);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
         .navbar .logo {
             color: #ff9f43;
             font-size: 20px;
             font-weight: bold;
+        }
+        .navbar .menu {
+            position: absolute;
+            right: 50px;
         }
         .navbar .menu a {
             color: white;
