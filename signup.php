@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         .navbar {
             width: 100%;
-            padding: 15px 50px;
+            padding: 10px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -44,11 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             top: 0;
             left: 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
         }
         .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 10px;
             font-weight: bold;
         }
         .navbar a:hover {
@@ -56,27 +57,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         .container {
             background: white;
-            padding: 30px;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
-            width: 350px;
-            margin-top: 80px;
+            width: 280px;
+            margin-top: 60px;
         }
         input {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 8px;
+            margin: 8px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 14px;
         }
         .btn {
             background: #190032;
             color: white;
-            padding: 10px;
+            padding: 8px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 14px;
         }
         .error { color: red; }
         .success { color: green; }
