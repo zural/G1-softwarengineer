@@ -12,10 +12,28 @@ session_start();
             margin: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(to right, #4b006e, #b04585);
+        }
+        .navbar {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            height: 100vh;
+            padding: 20px 50px;
+            background: linear-gradient(to right, #4b006e, #b04585);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .navbar .logo {
+            color: #ff9f43;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .navbar .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+        .navbar .menu a:hover {
+            text-decoration: underline;
         }
         .container {
             background: #fff;
@@ -24,6 +42,7 @@ session_start();
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: 350px;
             text-align: center;
+            margin: 100px auto;
         }
         .container h2 {
             margin-bottom: 20px;
@@ -68,6 +87,14 @@ session_start();
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <div class="logo">Optima Bank</div>
+        <div class="menu">
+            <a href="#">ABOUT US</a>
+            <a href="#">CONTACT</a>
+            <a href="#" style="text-decoration: underline;">SIGN IN</a>
+        </div>
+    </div>
     <div class="container">
         <h2>Sign in</h2>
         <form action="login.php" method="POST">

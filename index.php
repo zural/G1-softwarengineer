@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Optima Bank</title>
+    <title>FreshCart - Online Grocery Store | Optima Bank</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,16 +24,6 @@
             font-size: 24px;
             font-weight: bold;
             color: white;
-        }
-        .navbar .search-bar {
-            flex: 1;
-            margin: 0 20px;
-        }
-        .navbar input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
         }
         .navbar .menu {
             display: flex;
@@ -83,9 +73,6 @@
 <body>
     <div class="navbar">
         <div class="logo">FreshCart</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search for products">
-        </div>
         <div class="menu">
             <a href="Login.php" style="color: white;">Login</a>
             <a href="signup.php" style="color: white;">Sign Up</a>
@@ -103,6 +90,3 @@
     </div>
 </body>
 </html>
-
-
-
