@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             height: 100vh;
         }
         .navbar {
-            width: 95%;
+            width: 97%;
             padding: 10px 30px;
             display: flex;
             justify-content: space-between;
