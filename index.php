@@ -3,47 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshCart - Online Grocery Store | Optima Bank</title>
+    <title> Optima Bank</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
             background: linear-gradient(to right, #4b006e, #d472a3);
             color: white;
         }
+
+        /* Navbar */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px;
+            padding: 15px 20px;
             background: linear-gradient(to right, #4b006e, #d472a3);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .navbar .logo {
+
+        .logo {
             font-size: 24px;
             font-weight: bold;
-            color: white;
         }
-        .navbar .menu {
+
+        .menu {
             display: flex;
             gap: 15px;
         }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .menu a:hover {
+            color: #ffcc00;
+        }
+
+        /* Banner */
         .banner {
-            background: rgba(255, 255, 255, 0.2);
             text-align: center;
             padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             margin: 20px;
         }
+
         .banner h1 {
-            margin: 0;
             font-size: 36px;
         }
+
         .banner p {
             font-size: 18px;
             margin-top: 10px;
         }
+
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -53,6 +75,8 @@
             border-radius: 5px;
             margin-top: 10px;
         }
+
+        /* Optima Section */
         .optima-section {
             padding: 40px 20px;
             text-align: center;
@@ -60,28 +84,66 @@
             border-radius: 10px;
             margin: 20px;
         }
+
         .optima-section h2 {
             color: white;
+            font-size: 28px;
         }
+
         .optima-section p {
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .menu {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .banner h1 {
+                font-size: 28px;
+            }
+
+            .banner p {
+                font-size: 16px;
+            }
+
+            .optima-section h2 {
+                font-size: 24px;
+            }
+
+            .optima-section p {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <div class="logo">FreshCart</div>
+        <div class="logo">Optima Bank</div>
         <div class="menu">
-            <a href="Login.php" style="color: white;">Login</a>
-            <a href="signup.php" style="color: white;">Sign Up</a>
-            <a href="Mainpage.php" style="color: white;">Main Page</a>
+            <a href="Login.php">Login</a>
+            <a href="signup.php">Sign Up</a>
+            <a href="Mainpage.php">Main Page</a>
         </div>
     </div>
     
-    
-    
+    <div class="banner">
+        <h1>Welcome to Optima Bank</h1>
+        <p>Your trusted partner in financial success</p>
+        <a href="signup.php" class="btn">Join Now</a>
+    </div>
+
     <div class="optima-section">
         <h2>About Optima Bank</h2>
         <p>Optima Bank is a leading financial institution committed to providing innovative banking solutions tailored to meet the needs of individuals and businesses. With a customer-first approach, we offer seamless banking experiences through digital innovation and personalized services.</p>
