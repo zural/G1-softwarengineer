@@ -1,46 +1,86 @@
 <?php
 session_start();
-
-// Dummy credentials for testing
-$valid_email = "user@example.com";
-$valid_password = "password123";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    
-    if ($email === $valid_email && $password === $valid_password) {
-        $_SESSION["user"] = $email;
-        header("Location: welcome.php");
-        exit();
-    } else {
-        $error = "Invalid email or password!";
-    }
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Optima Bank - Sign In</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        form { display: inline-block; text-align: left; }
-        .error { color: red; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4b006e, #b04585);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background: black;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-google {
+            background: white;
+            color: black;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn-google img {
+            vertical-align: middle;
+            width: 20px;
+            margin-right: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #b04585;
+            display: block;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <h2>Sign In</h2>
-    <?php if (isset($error)) echo "<p class='error'>$error</p>"; ?>
-    <form method="POST">
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br><br>
-        <label>Password:</label><br>
-        <input type="password" name="password" required><br><br>
-        <button type="submit">Sign In</button>
-    </form>
+    <div class="container">
+        <h2>Sign in</h2>
+        <form action="login.php" method="POST">
+            <input type="text" name="email" placeholder="Email ID" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="checkbox" name="remember"> Remember Me
+            <a href="#">Forgot Password?</a>
+            <button type="submit" class="btn">Sign in</button>
+        </form>
+        <button class="btn-google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Google_%22G%22_Logo.svg" alt="Google"> Sign in with Google
+        </button>
+        <a href="#">or Sign up</a>
+    </div>
 </body>
 </html>
-
