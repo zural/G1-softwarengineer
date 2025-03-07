@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="navbar">
-        <div>Optima Bank</div>
+        <div style="color: orange;">Optima Bank</div>
         <div>
             <a href="#">ABOUT US</a>
             <a href="#">CONTACT</a>
