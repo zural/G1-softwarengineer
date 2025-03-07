@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             height: 100vh;
         }
         .navbar {
-            width: 96%;
+            width: 100%;
             padding: 10px 30px;
             display: flex;
             justify-content: space-between;
@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             margin-bottom: 20px;
         }
         input {
-            width: 100%;
+            width: calc(100% - 10px);
             padding: 10px;
             margin: 10px 0;
             border: none;
@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             gap: 10px;
         }
         .password-container input {
-            width: 100%;
+            width: 48%;
         }
         .btn {
             background: #190032;
