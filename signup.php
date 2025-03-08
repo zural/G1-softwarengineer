@@ -80,14 +80,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         .navbar {
             width: 96%;
-            padding: 10px 30px;
+            padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background: linear-gradient(to right, #3d1050, #c65591);
             color: white;
             position: absolute;
-            top: 10;
+            top: 0;
             left: 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             font-size: 14px;
