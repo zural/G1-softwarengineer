@@ -24,7 +24,13 @@ if (!isset($_SESSION['user_id'])) {
             color: white;
         }
         .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
             background: linear-gradient(to right, #4b006e, #d472a3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif
         }
         .navbar-brand {
             color: orange;
