@@ -110,6 +110,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             text-decoration: none;
             font-weight: bold;
         }
+        .background-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1); /* Slightly visible */
+            backdrop-filter: blur(10px); /* Soft blur effect */
+            z-index: -1; /* Keeps it behind other elements */
+        }
+
     </style>
 </head>
 <body>
@@ -121,6 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="#" style="text-decoration: underline;">SIGN UP</a>
         </div>
     </div>
+    <div class="background-layer"></div>
     <div class="container">
         <h2>Sign up</h2>
         <?php if (!empty($error)) echo "<p class='error'>$error</p>"; ?>

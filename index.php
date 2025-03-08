@@ -125,7 +125,7 @@
         <div class="menu">
             <a href="Login.php">Login</a>
             <a href="signup.php">Sign Up</a>
-            <a href="Mainpage.php">Main Page</a>
+            <!-- <a href="Mainpage.php">Main Page</a> -->
         </div>
     </div>
     
