@@ -40,7 +40,7 @@ if (!isset($_SESSION['user_id'])) {
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="mainpage.php">Optima Bank</a>
+        <a class="navbar-brand" href="Mainpage.php">Optima Bank</a>
         <a class="navbar-brand" href="logout.php">Logout</a>
         <div class="ml-auto">
             <span class="mr-3">Point Balance: 555</span>
