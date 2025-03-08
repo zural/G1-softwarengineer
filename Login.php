@@ -104,9 +104,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             font-size: 14px;
         }
 
-        .navbar .menu a.active {
-            text-decoration: underline;
-        }
         .container {
             background: #fff;
             padding: 30px;
