@@ -160,6 +160,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             display: block;
             margin-top: 10px;
         }
+        .background-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1); /* Light overlay */
+            backdrop-filter: blur(10px); /* Soft blur effect */
+            z-index: -1; /* Keeps it behind everything */
+            background-image: url('Bg.jpg'); /* Replace this later */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 <body>
@@ -172,6 +186,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="#" style="text-decoration: underline;">SIGN IN</a>
         </div>
     </div>
+
+    <div class="background-layer"></div>
 
     <!-- Login Container -->
     <div class="container">
