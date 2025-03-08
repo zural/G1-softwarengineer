@@ -181,6 +181,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background-position: center;
             background-repeat: no-repeat;
         }
+         /* Responsive Design */
+         @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .menu {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .banner, .optima-section {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
