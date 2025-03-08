@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'All fields are required.';
     } else {
         // Prepare a statement to check for the user by email
-        $stmt = $conn->prepare("SELECT Id, Password, Is_active FROM users WHERE Email = ?");
+        $stmt = $conn->prepare("SELECT Id, Password, Is_active FROM User WHERE Email = ?");
         if (!$stmt) {
             die('Prepare failed: ' . $conn->error); 
         }
