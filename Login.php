@@ -213,6 +213,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="#">ABOUT US</a>
             <a href="#">CONTACT</a>
             <a href="#">SIGN IN</a>
+            <a href="#">LOG IN</a>
         </div>
     </div>
     <div class="background-layer"></div>
