@@ -1,16 +1,56 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
-    
-    if ($password !== $confirm_password) {
-        $error = "Passwords do not match!";
-    } else {
-        // Here you can add database connection and insert data logic
-        $success = "Signup successful!";
+// Include your database connection file
+require 'db_connection.php';
+
+$error   = '';
+$success = '';
+
+// Handle form submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Gather form data (trim to remove any extra whitespace)
+    $username         = trim($_POST['username'] ?? '');
+    $email            = trim($_POST['email'] ?? '');
+    $phone            = trim($_POST['phone'] ?? '');
+    $password         = $_POST['password'] ?? '';
+    $confirm_password = $_POST['confirm_password'] ?? '';
+
+    // Basic validations
+    if (empty($username) || empty($email) || empty($phone) || empty($password) || empty($confirm_password)) {
+        $error = 'All fields are required.';
+    } elseif ($password !== $confirm_password) {
+        $error = 'Passwords do not match.';
+    }
+
+    if (empty($error)) {
+        // Hash password before saving to DB
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        // Check if email is already registered
+        $stmt = $conn->prepare("SELECT COUNT(*) FROM users WHERE Email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $stmt->bind_result($count);
+        $stmt->fetch();
+        $stmt->close();
+
+        if ($count > 0) {
+            $error = 'That email is already registered.';
+        } else {
+            // Insert new user; adjust column names if necessary
+            $stmt = $conn->prepare("
+                INSERT INTO users (Email, Username, Phone_number, Password, Is_active, Points) 
+                VALUES (?, ?, ?, ?, 1, 0)
+            ");
+            $stmt->bind_param("ssss", $email, $username, $phone, $hashedPassword);
+
+            if ($stmt->execute()) {
+                $success = 'Registration successful! You can now log in.';
+            } else {
+                $error = 'Error registering. Please try again.';
+            }
+
+            $stmt->close();
+        }
     }
 }
 ?>
@@ -116,9 +156,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.1); /* Slightly visible */
+            background: rgba(255, 255, 255, 0.1); /* Light overlay */
             backdrop-filter: blur(10px); /* Soft blur effect */
-            z-index: -1; /* Keeps it behind other elements */
+            z-index: -1; /* Keeps it behind everything */
+            background-image: url('your-image-path.jpg'); /* Replace this later */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
     </style>
@@ -133,11 +177,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
     <div class="background-layer"></div>
+
     <div class="container">
         <h2>Sign up</h2>
-        <?php if (!empty($error)) echo "<p class='error'>$error</p>"; ?>
-        <?php if (!empty($success)) echo "<p class='success'>$success</p>"; ?>
-        <form method="post">
+        <?php if (!empty($error)) : ?>
+            <p class="error"><?php echo $error; ?></p>
+        <?php endif; ?>
+        <?php if (!empty($success)) : ?>
+            <p class="success"><?php echo $success; ?></p>
+        <?php endif; ?>
+
+        <form method="post" action="">
             <input type="text" name="username" placeholder="Username" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="text" name="phone" placeholder="Phone Number" required>
