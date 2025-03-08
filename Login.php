@@ -66,111 +66,123 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optima Bank - Sign In</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: "Poppins", Arial, sans-serif;
-            background: linear-gradient(to right, #4b006e, #d472a3);
-            color: white;
-            line-height: 1.6;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4b006e, #b04585);
         }
-
-        /* Navbar */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
-            background: linear-gradient(to right, #4b006e, #d472a3);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px 50px;
+            background: linear-gradient(to right, #4b006e, #b04585);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
         }
-
-        .navbar-brand {
-            color: orange;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-
-        .logo {
-            font-size: 24px;
+        .navbar .logo {
+            color: #ff9f43;
+            font-size: 20px;
             font-weight: bold;
+            font-family: Arial, sans-serif;
         }
-
-        .menu {
+        .navbar .menu {
             display: flex;
-            gap: 15px;
+            align-items: center;
+            font-family: Arial, sans-serif;
         }
-
-        .menu a {
+        .navbar .menu a {
             color: white;
             text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s ease-in-out;
+            font-size: 14px;
+            margin: 0 10px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
         }
-
-        .menu a:hover {
-            color: #ffcc00;
+        .navbar .menu span {
+            color: white;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
         }
-
-        /* Banner */
-        .banner {
-            text-align: center;
-            padding: 30px 20px;
-            background: rgba(255, 255, 255, 0.2);
+        .navbar .menu a.active {
+            text-decoration: underline;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
             border-radius: 10px;
-            margin: 20px auto;
-            width: 60%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+            margin: 100px auto;
+            font-family: Arial, sans-serif;
         }
-
-        .banner h1 {
-            font-size: 32px;
+        .container h2 {
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
         }
-
-        .banner p {
-            font-size: 16px;
-            margin-top: 10px;
+        .error {
+            color: red;
+            margin: 10px 0;
+            font-family: Arial, sans-serif;
         }
-
+        input {
+            width: 93%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
         .btn {
-            display: inline-block;
-            padding: 10px 20px;
             background: black;
             color: white;
-            text-decoration: none;
+            padding: 10px;
+            width: 100%;
+            border: none;
             border-radius: 5px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+        .btn-google {
+            background: white;
+            color: black;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
             margin-top: 10px;
+            font-family: Arial, sans-serif;
         }
-
-        /* Optima Section */
-        .optima-section {
-            padding: 30px 20px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            margin: 20px auto;
-            width: 60%;
+        .btn-google img {
+            vertical-align: middle;
+            width: 20px;
+            margin-right: 5px;
         }
-
-        .optima-section h2 {
-            color: white;
-            font-size: 24px;
+        a {
+            text-decoration: none;
+            color: #b04585;
+            display: block;
+            margin-top: 10px;
+            font-family: Arial, sans-serif;
         }
-
-        .optima-section p {
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-            font-size: 16px;
+        .background-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            z-index: -1;
+            background-image: url('Bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
+         /* Responsive Design */
+         @media screen and (max-width: 768px) {
             .navbar {
                 flex-direction: column;
                 text-align: center;
