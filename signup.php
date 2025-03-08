@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             margin-bottom: 20px;
         }
         input {
-            width: calc(95%);
+            width: calc(94%);
             padding: 10px;
             margin: 10px 0;
             border: none;
