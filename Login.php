@@ -99,10 +99,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             font-weight: bold;
         }
 
+        .navbar .menu span {
+            color: white;
+            font-size: 14px;
+        }
+
         .navbar .menu a.active {
             text-decoration: underline;
         }
-
         .container {
             background: #fff;
             padding: 30px;
@@ -110,69 +114,65 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: 350px;
             text-align: center;
-            margin: 10vh auto;
+            margin: 100px auto;
         }
-
         .container h2 {
             margin-bottom: 20px;
         }
-
         .error {
             color: red;
             margin: 10px 0;
         }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
         input {
-            width: 90%;
+            width: 100%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
-            text-align: center;
         }
-
         .btn {
             background: black;
             color: white;
             padding: 10px;
-            width: 90%;
+            width: 100%;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 10px;
         }
-
         .btn-google {
             background: white;
             color: black;
             padding: 10px;
-            width: 90%;
+            width: 100%;
             border: 1px solid black;
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
-
         .btn-google img {
             vertical-align: middle;
             width: 20px;
             margin-right: 5px;
         }
-
         a {
             text-decoration: none;
             color: #b04585;
             display: block;
             margin-top: 10px;
+        }
+        .background-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1); /* Light overlay */
+            backdrop-filter: blur(10px); /* Soft blur effect */
+            z-index: -1; /* Keeps it behind everything */
+            background-image: url('Bg.jpg'); /* Replace this later */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
@@ -183,9 +183,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="menu">
             <a href="#">ABOUT US</a>
             <a href="#">CONTACT</a>
-            <a href="#" class="active">SIGN IN</a>
+            <a href="#" style="text-decoration: underline;">SIGN IN</a>
         </div>
     </div>
+
+    <div class="background-layer"></div>
 
     <!-- Login Container -->
     <div class="container">
