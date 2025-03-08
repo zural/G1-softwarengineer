@@ -28,6 +28,10 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
+        .navbar-brand {
+            color: orange;
+        }
+
         .logo {
             font-size: 24px;
             font-weight: bold;
@@ -121,7 +125,7 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="logo">Optima Bank</div>
+        <div class="navbar-brand">Optima Bank</div>
         <div class="menu">
             <a href="Login.php">Login</a>
             <a href="signup.php">Sign Up</a>
