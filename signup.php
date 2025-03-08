@@ -203,7 +203,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <button type="submit" class="btn">Sign Up</button>
         </form>
-        <div class="login-link">or <a href="login.php">Log in</a></div>
+        <div class="login-link">or <a href="Login.php">Log in</a></div>
     </div>
 </body>
 </html>
