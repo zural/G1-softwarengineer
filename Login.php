@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         body {
             margin: 0;
             font-family: "Poppins", Arial, sans-serif;
-            background: url('/mnt/data/image.png') no-repeat center center fixed;
+            background: url('Bg.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
         }
