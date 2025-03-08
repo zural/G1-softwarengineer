@@ -69,7 +69,7 @@ if (!isset($_SESSION['user_id'])) {
             </div>
             <div class="col-md-4">
                 <div class="voucher-card">
-                    <img src="Uniqlo.png" alt="Uniqlo" class="img-fluid">
+                    <img src="Uniqlo. png" alt="Uniqlo" class="img-fluid">
                     <h5>Uniqlo - 30% Off</h5>
                     <button class="btn redeem-btn">Redeem</button>
                     <button class="btn btn-outline-dark">Add to Cart</button>
