@@ -104,6 +104,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             font-size: 14px;
         }
 
+        .navbar .menu a.active {
+            text-decoration: underline;
+        }
         .container {
             background: #fff;
             padding: 30px;
@@ -180,7 +183,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="menu">
             <a href="#">ABOUT US</a>
             <a href="#">CONTACT</a>
-            <a href="#" style="text-decoration: underline;">SIGN IN</a>
+            <a href="#">SIGN IN</a>
         </div>
     </div>
 
