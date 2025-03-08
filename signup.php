@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         // Check if email is already registered
-        $stmt = $conn->prepare("SELECT COUNT(*) FROM users WHERE Email = ?");
+        $stmt = $conn->prepare("SELECT COUNT(*) FROM User WHERE Email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $stmt->bind_result($count);
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             // Insert new user; adjust column names if necessary
             $stmt = $conn->prepare("
-                INSERT INTO users (Email, Username, Phone_number, Password, Is_active, Points) 
+                INSERT INTO User (Email, Username, Phone_number, Password, Is_active, Points) 
                 VALUES (?, ?, ?, ?, 1, 0)
             ");
             $stmt->bind_param("ssss", $email, $username, $phone, $hashedPassword);
