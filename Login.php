@@ -78,32 +78,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             padding: 20px 50px;
             background: linear-gradient(to right, #4b006e, #b04585);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
         }
-
         .navbar .logo {
             color: #ff9f43;
             font-size: 20px;
             font-weight: bold;
+            font-family: Arial, sans-serif;
         }
-
         .navbar .menu {
             display: flex;
             align-items: center;
+            font-family: Arial, sans-serif;
         }
-
         .navbar .menu a {
             color: white;
             text-decoration: none;
             font-size: 14px;
             margin: 0 10px;
             font-weight: bold;
+            font-family: Arial, sans-serif;
         }
-
         .navbar .menu span {
             color: white;
             font-size: 14px;
+            font-family: Arial, sans-serif;
         }
-
         .navbar .menu a.active {
             text-decoration: underline;
         }
@@ -115,13 +115,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             width: 350px;
             text-align: center;
             margin: 100px auto;
+            font-family: Arial, sans-serif;
         }
         .container h2 {
             margin-bottom: 20px;
+            font-family: Arial, sans-serif;
         }
         .error {
             color: red;
             margin: 10px 0;
+            font-family: Arial, sans-serif;
         }
         input {
             width: 93%;
@@ -129,6 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-family: Arial, sans-serif;
         }
         .btn {
             background: black;
@@ -138,6 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-family: Arial, sans-serif;
         }
         .btn-google {
             background: white;
@@ -148,6 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
+            font-family: Arial, sans-serif;
         }
         .btn-google img {
             vertical-align: middle;
@@ -159,6 +165,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             color: #b04585;
             display: block;
             margin-top: 10px;
+            font-family: Arial, sans-serif;
         }
         .background-layer {
             position: fixed;
@@ -166,10 +173,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.1); /* Light overlay */
-            backdrop-filter: blur(10px); /* Soft blur effect */
-            z-index: -1; /* Keeps it behind everything */
-            background-image: url('Bg.jpg'); /* Replace this later */
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            z-index: -1;
+            background-image: url('Bg.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -177,7 +184,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </style>
 </head>
 <body>
-    <!-- Top Nav -->
     <div class="navbar">
         <div class="logo">Optima Bank</div>
         <div class="menu">
@@ -186,24 +192,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="#">SIGN IN</a>
         </div>
     </div>
-
     <div class="background-layer"></div>
-
-    <!-- Login Container -->
     <div class="container">
         <h2>Sign in</h2>
-
-        <!-- Display error messages if any -->
         <?php if (!empty($error)) : ?>
             <p class="error"><?php echo $error; ?></p>
         <?php endif; ?>
-
         <form action="" method="POST">
             <input type="text" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit" class="btn">Sign in</button>
         </form>
-
         <button class="btn-google">
             <img src="google.png" alt="Google"> 
             Sign in with Google
@@ -212,3 +211,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </body>
 </html>
+
