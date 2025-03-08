@@ -180,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
 
         <button class="btn-google">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Google_%22G%22_Logo.svg" alt="Google"> 
+            <img src="google.png" alt="Google"> 
             Sign in with Google
         </button>
         <a href="signup.php">or Sign up</a>
