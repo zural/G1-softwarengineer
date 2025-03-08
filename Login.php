@@ -68,56 +68,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #4b006e, #b04585);
+            font-family: "Poppins", Arial, sans-serif;
+            background: url('/mnt/data/image.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
         }
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 50px;
-            background: linear-gradient(to right, #4b006e, #b04585);
+            padding: 15px 50px;
+            background: rgba(75, 0, 110, 0.8);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
         .navbar .logo {
             color: #ff9f43;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
         }
-
         .navbar .menu {
             display: flex;
             align-items: center;
         }
-
         .navbar .menu a {
             color: white;
             text-decoration: none;
-            font-size: 14px;
-            margin: 0 10px;
+            font-size: 16px;
+            margin: 0 15px;
             font-weight: bold;
         }
-
-        .navbar .menu span {
-            color: white;
-            font-size: 14px;
-        }
-
         .navbar .menu a.active {
             text-decoration: underline;
         }
         .container {
-            background: #fff;
-            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 350px;
+            width: 400px;
             text-align: center;
-            margin: 100px auto;
+            margin: 10vh auto;
         }
         .container h2 {
             margin-bottom: 20px;
+            color: black;
         }
         .error {
             color: red;
@@ -125,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         input {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -133,21 +127,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .btn {
             background: black;
             color: white;
-            padding: 10px;
+            padding: 12px;
             width: 100%;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #333;
         }
         .btn-google {
             background: white;
             color: black;
-            padding: 10px;
+            padding: 12px;
             width: 100%;
             border: 1px solid black;
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
+            font-size: 16px;
         }
         .btn-google img {
             vertical-align: middle;
@@ -159,20 +158,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             color: #b04585;
             display: block;
             margin-top: 10px;
-        }
-        .background-layer {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1); /* Light overlay */
-            backdrop-filter: blur(10px); /* Soft blur effect */
-            z-index: -1; /* Keeps it behind everything */
-            background-image: url('Bg.jpg'); /* Replace this later */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -183,11 +169,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="menu">
             <a href="#">ABOUT US</a>
             <a href="#">CONTACT</a>
-            <a href="#" style="text-decoration: underline;">SIGN IN</a>
+            <a href="#" class="active">SIGN IN</a>
         </div>
     </div>
-
-    <div class="background-layer"></div>
 
     <!-- Login Container -->
     <div class="container">
