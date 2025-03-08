@@ -78,24 +78,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             padding: 20px 50px;
             background: linear-gradient(to right, #4b006e, #b04585);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
         }
+
         .navbar .logo {
             color: #ff9f43;
             font-size: 20px;
             font-weight: bold;
         }
+
         .navbar .menu {
-            position: absolute;
-            right: 50px;
+            display: flex;
+            align-items: center;
         }
+
         .navbar .menu a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            font-size: 14px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .navbar .menu span {
+            color: white;
             font-size: 14px;
         }
-        .navbar .menu a:hover {
+
+        .navbar .menu a.active {
             text-decoration: underline;
         }
         .container {
