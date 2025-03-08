@@ -24,6 +24,9 @@ if (!isset($_SESSION['user_id'])) {
         .navbar {
             background: linear-gradient(to right, #4b006e, #d472a3);
         }
+        .navbar-brand {
+            color: orange !important;
+        }
         .voucher-card {
             background: white;
             color: black;
