@@ -13,55 +13,42 @@
         
         body {
             font-family: "Poppins", Arial, sans-serif;
-            background: url('/mnt/data/image.png') no-repeat center center fixed;
-            background-size: cover;
+            background: linear-gradient(to right, #4b006e, #d472a3);
             color: white;
             line-height: 1.6;
-            position: relative;
         }
-        
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(75, 0, 110, 0.7), rgba(212, 114, 163, 0.7));
-            z-index: -1;
-        }
-        
+
         /* Navbar */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 20px;
-            background: rgba(75, 0, 110, 0.8);
+            background: linear-gradient(to right, #4b006e, #d472a3);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+
         .logo {
             font-size: 24px;
             font-weight: bold;
         }
-        
+
         .menu {
             display: flex;
             gap: 15px;
         }
-        
+
         .menu a {
             color: white;
             text-decoration: none;
             font-size: 16px;
             transition: color 0.3s ease-in-out;
         }
-        
+
         .menu a:hover {
             color: #ffcc00;
         }
-        
+
         /* Banner */
         .banner {
             text-align: center;
@@ -71,16 +58,16 @@
             margin: 20px auto;
             width: 60%;
         }
-        
+
         .banner h1 {
             font-size: 32px;
         }
-        
+
         .banner p {
             font-size: 16px;
             margin-top: 10px;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -90,7 +77,7 @@
             border-radius: 5px;
             margin-top: 10px;
         }
-        
+
         /* Optima Section */
         .optima-section {
             padding: 30px 20px;
@@ -100,32 +87,32 @@
             margin: 20px auto;
             width: 60%;
         }
-        
+
         .optima-section h2 {
             color: white;
             font-size: 24px;
         }
-        
+
         .optima-section p {
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.6;
             font-size: 16px;
         }
-        
+
         /* Responsive Design */
         @media screen and (max-width: 768px) {
             .navbar {
                 flex-direction: column;
                 text-align: center;
             }
-            
+
             .menu {
                 flex-direction: column;
                 gap: 10px;
                 margin-top: 10px;
             }
-            
+
             .banner, .optima-section {
                 width: 90%;
             }
@@ -138,6 +125,7 @@
         <div class="menu">
             <a href="Login.php">Login</a>
             <a href="signup.php">Sign Up</a>
+            <!-- <a href="Mainpage.php">Main Page</a> -->
         </div>
     </div>
     
