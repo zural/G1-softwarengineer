@@ -91,6 +91,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             align-items: center;
             font-family: Arial, sans-serif;
         }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
         .navbar .menu a {
             color: white;
             text-decoration: none;
