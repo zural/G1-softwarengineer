@@ -44,7 +44,7 @@ if (!isset($_SESSION['user_id'])) {
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="Mainpage.php">Optima Bank</a>
-        <a class="navbar-brand" href="logout.php">Logout</a>
+        <a class="ext-white" href="logout.php">Logout</a>
         <div class="ml-auto">
             <span class="mr-3">Point Balance: 555</span>
             <a href="#" class="text-white">Profile</a>
