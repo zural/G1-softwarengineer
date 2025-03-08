@@ -1,8 +1,11 @@
 <?php
 // Start session to manage points
 session_start();
-if (!isset($_SESSION['points'])) {
-    $_SESSION['points'] = 750;
+
+if (!isset($_SESSION['user_id'])) {
+    // User is not logged in; redirect to login page
+    header('Location: login.php');
+    exit;
 }
 ?>
 
@@ -37,9 +40,10 @@ if (!isset($_SESSION['points'])) {
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">Optima Bank</a>
+        <a class="navbar-brand" href="mainpage.php">Optima Bank</a>
+        <a class="navbar-brand" href="logout.php">Optima Bank</a>
         <div class="ml-auto">
-            <span class="mr-3">Point Balance: <?php echo $_SESSION['points']; ?></span>
+            <span class="mr-3">Point Balance: 555</span>
             <a href="#" class="text-white">Profile</a>
         </div>
     </nav>
@@ -49,7 +53,7 @@ if (!isset($_SESSION['points'])) {
         <div class="row">
             <div class="col-md-4">
                 <div class="voucher-card">
-                    <img src="hotel.jpg" alt="D'Wharf Hotel" class="img-fluid">
+                    <img src="Hotel.jpeg" alt="D'Wharf Hotel" class="img-fluid">
                     <h5>D'Wharf Hotel - RM50 Off</h5>
                     <button class="btn redeem-btn">Redeem</button>
                     <button class="btn btn-outline-dark">Add to Cart</button>
@@ -57,7 +61,7 @@ if (!isset($_SESSION['points'])) {
             </div>
             <div class="col-md-4">
                 <div class="voucher-card">
-                    <img src="trip.jpg" alt="Trip.Com" class="img-fluid">
+                    <img src="Trip.png" alt="Trip.Com" class="img-fluid">
                     <h5>Trip.Com - 10% Off</h5>
                     <button class="btn redeem-btn">Redeem</button>
                     <button class="btn btn-outline-dark">Add to Cart</button>
@@ -65,7 +69,7 @@ if (!isset($_SESSION['points'])) {
             </div>
             <div class="col-md-4">
                 <div class="voucher-card">
-                    <img src="uniqlo.jpg" alt="Uniqlo" class="img-fluid">
+                    <img src="Uniqlo.png" alt="Uniqlo" class="img-fluid">
                     <h5>Uniqlo - 30% Off</h5>
                     <button class="btn redeem-btn">Redeem</button>
                     <button class="btn btn-outline-dark">Add to Cart</button>
