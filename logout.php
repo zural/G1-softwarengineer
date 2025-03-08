@@ -6,6 +6,6 @@ session_unset();
 session_destroy();
 
 // Redirect to login page (adjust path or filename as needed)
-header('Location: login.php');
+header('Location: index.php');
 exit;
 ?>
