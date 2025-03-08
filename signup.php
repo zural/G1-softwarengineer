@@ -159,7 +159,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background: rgba(255, 255, 255, 0.1); /* Light overlay */
             backdrop-filter: blur(10px); /* Soft blur effect */
             z-index: -1; /* Keeps it behind everything */
-            background-image: url('your-image-path.jpg'); /* Replace this later */
+            background-image: url('Bg.jpg'); /* Replace this later */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
