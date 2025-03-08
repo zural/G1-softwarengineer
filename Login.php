@@ -137,6 +137,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border-radius: 5px;
             font-family: Arial, sans-serif;
         }
+        .btn:hover {
+            background: #29004d;
+        }
         .btn {
             background: black;
             color: white;
