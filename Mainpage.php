@@ -18,28 +18,11 @@ if (!isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #3d1050, #c65591);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            background: linear-gradient(to right, #4b006e, #d472a3);
+            color: white;
         }
         .navbar {
-            width: 94%;
-            padding: 20px 45px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(to right, #3d1050, #c65591);
-            color: white;
-            position: absolute;
-            top: 0;
-            left: 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            font-size: 14px;
+            background: linear-gradient(to right, #4b006e, #d472a3);
         }
         .navbar-brand {
             color: orange;
