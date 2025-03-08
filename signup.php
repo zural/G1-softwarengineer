@@ -179,7 +179,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div>
             <a href="#">ABOUT US</a>
             <a href="#">CONTACT</a>
-            <a href="#" style="text-decoration: underline;">SIGN UP</a>
+            <a href="#">SIGN UP</a>
         </div>
     </div>
     <div class="background-layer"></div>
